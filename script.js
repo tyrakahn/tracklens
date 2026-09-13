@@ -1,6 +1,6 @@
 
 const team = [
-  { name: "Erdion Lajiq", title: "Project Manager", department: ["Management"], email: "erdla490@student.liu.se", image: "images/Erdion_Lajiq.jpg" },
+  { name: "Erdion Lajiq", title: "Project Manager", department: ["Management"], email: "erdla490@student.liu.se", image: "Erdion_Lajiq.jpg" },
   { name: "Ali Azimi", title: "R&D Manager", department: ["Management"], email: "aliaz557@student.liu.se", image: "images/Ali_Azimi.jpg" },
   { name: "Victor Kallenberg", title: "P&S Manager", department: ["Management"], email: "vicka991@student.liu.se", image: "images/Victor_Kallenberg.jpg" },
   { name: "Albin Westerdahl", title: "Process Manager", department: ["Product & Sales"], email: "albwe215@student.liu.se", image: "images/Albin_Westerdahl.jpg" },
