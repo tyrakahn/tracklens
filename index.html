@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>TrackLens</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="masthead-row">
+      <h1>TrackLens</h1>
+      <span class="issue-no">TDDC88 - Software Engineering, Linköping University</span>
+    </div>
+    <p class="masthead-sub">The Team Behind TrackLens</p>
+  </header>
+
+  <nav class="filterbar">
+    <div class="f-group f-search">
+      <label for="searchInput">Search</label>
+      <input type="text" id="searchInput" placeholder="name&hellip;" >
+    </div>
+    <div class="f-group">
+      <label for="departmentFilter">Department</label>
+      <select id="departmentFilter"><option value="">All</option></select>
+    </div>
+    <div class="f-group">
+      <label for="roleFilter">Title</label>
+      <select id="roleFilter"><option value="">All</option></select>
+    </div>
+    <div class="f-count" id="resultCount"></div>
+  </nav>
+
+  <main>
+    <ul class="matrix" id="teamGrid"></ul>
+
+    <p class="empty-state" id="emptyState" hidden>No results found.</p>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
