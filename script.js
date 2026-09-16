@@ -1,7 +1,7 @@
 
 const team = [
   { name: "Erdion Lajiq", title: "Project Manager", department: ["Management"], email: "erdla490@student.liu.se", image: "Erdion_Lajiq.jpg" },
-  { name: "Ali Azimi", title: "R&D Manager", department: ["Management"], email: "aliaz557@student.liu.se", image: "Ali_Azimi.jpg" },
+  { name: "Ali Azimi", title: "R&D Manager", department: ["Management"], email: "aliaz557@student.liu.se", image: "Ali_Azimi.jpeg" },
   { name: "Victor Kallenberg", title: "P&S Manager", department: ["Management"], email: "vicka991@student.liu.se", image: "Victor_Kallenberg.jpg" },
   { name: "Albin Westerdahl", title: "Process Manager", department: ["Product & Sales"], email: "albwe215@student.liu.se", image: "Albin_Westerdahl.jpg" },
   { name: "Lilly Eriksson", title: "Product Manager", department: ["Product & Sales"], email: "liler063@student.liu.se", image: "lilly_eriksson.png" },
@@ -21,9 +21,9 @@ const team = [
   { name: "Isak Kälvegren", title: "Config Manager", department: ["Research & Development"], email: "isaka283@student.liu.se", image: "Isak_Kälvegren.jpg" },
   { name: "Isak Mattson", title: "Pipeline & Deployment Manager", department: ["Research & Development"], email: "isama856@student.liu.se", image: "Isak_Mattsson.png" },
   { name: "Kasper Andreasson", title: "Agentic Responsible", department: ["Research & Development"], email: "kasan688@student.liu.se", image: "Kasper_Andreasson.jpg" },
-  { name: "Alex Eriksson", title: "Developer", department: ["Research & Development"], email: "aleer595@student.liu.se", image: "Alex_Eriksson.jpg" },
+  { name: "Alex Eriksson", title: "Developer", department: ["Research & Development"], email: "aleer595@student.liu.se", image: "Alex_Eriksson.png" },
   { name: "Gustav Kölerud", title: "Developer", department: ["Research & Development"], email: "gusko433@student.liu.se", image: "Gustav_Kölerud.jpeg" },
-  { name: "Johan Larsson", title: "Developer", department: ["Research & Development"], email: "johla909@student.liu.se", image: "Johan_Larsson.jpg" },
+  { name: "Johan Larsson", title: "Developer", department: ["Research & Development"], email: "johla909@student.liu.se", image: "johan_larsson.jpg" },
   { name: "Jonathan Blomqvist", title: "Developer", department: ["Research & Development"], email: "jonbl638@student.liu.se", image: "Jonathan_Blomqvist.jpg" },
   { name: "Leo Fong", title: "Developer", department: ["Research & Development"], email: "leofo500@student.liu.se", image: "Leo_Fong.JPG" },
   { name: "Ebba Kanon", title: "Developer", department: ["Research & Development"], email: "ebbka919@student.liu.se", image: "Ebba_Kanon.jpg" },
