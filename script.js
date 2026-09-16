@@ -10,7 +10,7 @@ const team = [
   { name: "Arvid Kylberg", title: "Analyst", department: ["Product & Sales"], email: "arvky509@student.liu.se", image: "Kylberg_Arvid.jpg" },
   { name: "Melker Kimby", title: "Analyst", department: ["Product & Sales"], email: "melki871@student.liu.se", image: "Melker_Kimby.jpeg" },
   { name: "Linn Aldgård Lindblom", title: "UX Designer", department: ["Product & Sales", "Research & Development"], email: "linal488@student.liu.se", image: "Linn_Aldgård_Lindblom.jpg" },
-  { name: "Tyra Kahn", title: "UX Desginer", department: ["Product & Sales", "Research & Development"], email: "tyrka731@student.liu.se", image: "Tyra_Kahn.JPG" },
+  { name: "Tyra Kahn", title: "UX Designer", department: ["Product & Sales", "Research & Development"], email: "tyrka731@student.liu.se", image: "Tyra_Kahn.JPG" },
   { name: "Isak Gunnarsson", title: "Technical Writer", department: ["Product & Sales"], email: "isagu342@student.liu.se", image: "isak_gunnarsson.JPG" },
   { name: "Johan Löttinger", title: "Technical Writer", department: ["Product & Sales"], email: "johlo529@student.liu.se", image: "Johan_Löttinger.jpg" },
   { name: "Dzenan Gradisic", title: "QA Lead", department: ["Product & Sales"], email: "dzegr019@student.liu.se", image: "Dzenan_Gradisic.jpg" },
