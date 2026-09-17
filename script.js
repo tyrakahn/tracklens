@@ -16,7 +16,7 @@ const team = [
   { name: "Dzenan Gradisic", title: "QA Lead", department: ["Product & Sales"], email: "dzegr019@student.liu.se", image: "Dzenan_Gradisic.jpg" },
   { name: "Johan Hultgren", title: "Tester", department: ["Product & Sales"], email: "johhu973@student.liu.se", image: "Johan_Hultgren.jpg" },
   { name: "Hugo Waller", title: "Tester", department: ["Product & Sales"], email: "hugwa027@student.liu.se", image: "Hugo_Waller.jpg" },
-  { name: "Erik Andreasson", title: "Tester", department: ["Product & Sales"], email: "erand459@student.liu.se", image: "Erik_Andreasson.jpg" },
+  { name: "Erik Andreasson", title: "Tester", department: ["Product & Sales"], email: "erand459@student.liu.se", image: "Erik_Andreasson.jpeg" },
   { name: "Prithvi Raj Ashokkumar", title: "Architect", department: ["Research & Development"], email: "prias732@student.liu.se", image: "Prithvi_raj_ashokkumar.jpg" },
   { name: "Isak Kälvegren", title: "Config Manager", department: ["Research & Development"], email: "isaka283@student.liu.se", image: "Isak_Kälvegren.jpg" },
   { name: "Isak Mattson", title: "Pipeline & Deployment Manager", department: ["Research & Development"], email: "isama856@student.liu.se", image: "Isak_Mattsson.png" },
