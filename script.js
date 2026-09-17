@@ -20,7 +20,7 @@ const team = [
   { name: "Prithvi Raj Ashokkumar", title: "Architect", department: ["Research & Development"], email: "prias732@student.liu.se", image: "Prithvi_raj_ashokkumar.jpg" },
   { name: "Isak Kälvegren", title: "Config Manager", department: ["Research & Development"], email: "isaka283@student.liu.se", image: "Isak_Kälvegren.jpg" },
   { name: "Isak Mattson", title: "Pipeline & Deployment Manager", department: ["Research & Development"], email: "isama856@student.liu.se", image: "Isak_Mattsson.png" },
-  { name: "Kasper Andreasson", title: "Agentic Responsible", department: ["Research & Development"], email: "kasan688@student.liu.se", image: "Kasper_Andreasson.jpg" },
+  { name: "Kasper Andreasson", title: "Agentic Responsible", department: ["Research & Development"], email: "kasan688@student.liu.se", image: "Kasper_andreasson.jpeg" },
   { name: "Alex Eriksson", title: "Developer", department: ["Research & Development"], email: "aleer595@student.liu.se", image: "Alex_Eriksson.png" },
   { name: "Gustav Kölerud", title: "Developer", department: ["Research & Development"], email: "gusko433@student.liu.se", image: "Gustav_Kölerud.jpeg" },
   { name: "Johan Larsson", title: "Developer", department: ["Research & Development"], email: "johla909@student.liu.se", image: "johan_larsson.jpg" },
