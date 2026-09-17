@@ -143,9 +143,44 @@ function applyFilters() {
   render(filtered);
 }
 
+function getRolesForDepartment(department) {
+  const filteredTeam = department
+    ? team.filter(member => member.department.includes(department))
+    : team;
+
+  const availableRoles = [];
+  for (let i = 0; i < filteredTeam.length; i++) {
+    const role = filteredTeam[i].title;
+    if (!availableRoles.includes(role)) {
+      availableRoles.push(role);
+    }
+  }
+  return availableRoles;
+}
+
+function updateRoleFilter() {
+  const department = departmentFilter.value;
+  const currentRole = roleFilter.value;
+  const availableRoles = getRolesForDepartment(department);
+
+  roleFilter.innerHTML = "";
+  const allOption = document.createElement("option");
+  allOption.value = "";
+  allOption.textContent = "All";
+  roleFilter.appendChild(allOption);
+
+  populateSelect(roleFilter, availableRoles);
+
+  // Behåll vald title om den fortfarande är giltig för departmentet, annars återgå till "All"
+  roleFilter.value = availableRoles.includes(currentRole) ? currentRole : "";
+}
+
 
 searchInput.addEventListener("input", applyFilters);
-departmentFilter.addEventListener("change", applyFilters);
+departmentFilter.addEventListener("change", () => {
+  updateRoleFilter();
+  applyFilters();
+});
 roleFilter.addEventListener("change", applyFilters);
 
 // ---------- Start ----------
