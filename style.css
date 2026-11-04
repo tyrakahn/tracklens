@@ -4,6 +4,7 @@
   --ink-soft: #173f17;
   --accent: #116624;
   --accent-2: #40ac5e;
+  --line: #b9c7b3;
   --mono: 'IBM Plex Mono', ui-monospace, monospace;
   --serif: 'Fraunces', Georgia, serif;
 }
@@ -53,6 +54,79 @@ body {
   font-style: italic;
   font-size: 1.05rem;
   color: var(--ink-soft);
+}
+
+
+/* ---------- Flikar ---------- */
+
+.tabs {
+  display: flex;
+  gap: 28px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 28px;
+}
+
+.tab {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  padding: 0 0 10px;
+  cursor: pointer;
+}
+
+.tab:hover { color: var(--accent); }
+
+.tab[aria-selected="true"] {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 4px;
+}
+
+/* ---------- About & Updates ---------- */
+
+.prose p {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  line-height: 1.65;
+  margin: 0 0 14px;
+  max-width: 62ch;
+}
+
+.updates {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 70ch;
+}
+
+.updates li {
+  border-left: 2px solid var(--accent-2);
+  padding: 0 0 20px 16px;
+}
+
+.updates li:last-child { padding-bottom: 0; }
+
+.update-date {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.updates p {
+  font-size: 0.86rem;
+  line-height: 1.6;
+  margin: 0;
 }
 
 
@@ -157,7 +231,11 @@ body {
 
 
 
-
+.cell-name {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  margin: 0 0 4px;
+}
 
 .cell-title {
   font-size: 0.8rem;
@@ -180,6 +258,21 @@ body {
   margin: 0;
 }
 
+.empty-state {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 24px 0 0;
+}
+
+.site-footer {
+  margin-top: 56px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 0.74rem;
+  color: var(--ink-soft);
+}
+
 @media (max-width: 640px) {
   .wrap {
     padding: 32px 16px 56px;
@@ -189,6 +282,8 @@ body {
     flex-wrap: wrap;
     gap: 8px;
   }
+
+  .tabs { gap: 20px; }
 
   .filterbar {
     flex-wrap: wrap;
@@ -204,5 +299,3 @@ body {
     gap: 24px 16px;
   }
 }
-
-

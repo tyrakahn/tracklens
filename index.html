@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
@@ -18,27 +18,86 @@
     <p class="masthead-sub">The Team Behind TrackLens</p>
   </header>
 
-  <nav class="filterbar">
-    <div class="f-group f-search">
-      <label for="searchInput">Search</label>
-      <input type="text" id="searchInput" placeholder="name&hellip;" >
-    </div>
-    <div class="f-group">
-      <label for="departmentFilter">Department</label>
-      <select id="departmentFilter"><option value="">All</option></select>
-    </div>
-    <div class="f-group">
-      <label for="roleFilter">Title</label>
-      <select id="roleFilter"><option value="">All</option></select>
-    </div>
-    <div class="f-count" id="resultCount"></div>
-  </nav>
+  <div class="tabs" role="tablist" aria-label="Sections">
+    <button class="tab" role="tab" id="tab-team" aria-controls="panel-team" aria-selected="true">Team</button>
+    <button class="tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="false" tabindex="-1">About</button>
+    <button class="tab" role="tab" id="tab-updates" aria-controls="panel-updates" aria-selected="false" tabindex="-1">Updates</button>
+  </div>
 
-  <main>
+  <!-- ---------- Team ---------- -->
+  <section class="panel" role="tabpanel" id="panel-team" aria-labelledby="tab-team">
+    <nav class="filterbar">
+      <div class="f-group f-search">
+        <label for="searchInput">Search</label>
+        <input type="text" id="searchInput" placeholder="name&hellip;" >
+      </div>
+      <div class="f-group">
+        <label for="departmentFilter">Department</label>
+        <select id="departmentFilter"><option value="">All</option></select>
+      </div>
+      <div class="f-group">
+        <label for="roleFilter">Title</label>
+        <select id="roleFilter"><option value="">All</option></select>
+      </div>
+      <div class="f-count" id="resultCount"></div>
+    </nav>
+
     <ul class="matrix" id="teamGrid"></ul>
 
     <p class="empty-state" id="emptyState" hidden>No results found.</p>
-  </main>
+  </section>
+
+  <!-- ---------- About ---------- -->
+  <section class="panel" role="tabpanel" id="panel-about" aria-labelledby="tab-about" hidden>
+    <div class="prose">
+      <p>
+        TrackLens analyses metadata from Axis cameras to detect events such as
+        people moving the wrong way, entering a forbidden zone or staying in
+        one place for too long. The events are shown to an operator in a web
+        interface, together with a short video clip of what happened.
+      </p>
+      <p>
+        The project is developed by a team of 28 students in four core teams
+        and a support team, for Axis Communications, as part of the course
+        TDDC88 Software Engineering at Linköping University.
+      </p>
+    </div>
+  </section>
+
+  <!-- ---------- Updates ---------- -->
+  <section class="panel" role="tabpanel" id="panel-updates" aria-labelledby="tab-updates" hidden>
+    <!-- Lägg nya uppdateringar överst och ändra "Last updated" längst ner. -->
+    <ol class="updates">
+      <li>
+        <span class="update-date">November 2026</span>
+        <p>
+          Rule violations for Wrong way, Forbidden zone and manual Long dwell
+          are now published as events. The Events page shows how a Long dwell
+          event was flagged (statistical or manual) and how long the person
+          stayed.
+        </p>
+      </li>
+      <li>
+        <span class="update-date">October 2026</span>
+        <p>
+          Each camera can have its own rules for Wrong way, Forbidden zone and
+          manual Long dwell, saved and changed independently. New detectors
+          for Forbidden zone and manual Long dwell.
+        </p>
+      </li>
+      <li>
+        <span class="update-date">9 October 2026</span>
+        <p>
+          Sprint 2 started with a new team structure: four core teams
+          (CT1&ndash;CT4) and a support team.
+        </p>
+      </li>
+    </ol>
+  </section>
+
+  <footer class="site-footer">
+    Last updated: <time datetime="2026-11-04">4 November 2026</time>
+  </footer>
 
 </div>
 

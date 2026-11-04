@@ -10,8 +10,8 @@ const team = [
   { name: "Ture Franzén", roles: ["Analyst", "CT2 Lead", "Forbidden Zone Coordinator"], team: "CT2", department: ["Product & Sales"], email: "turfr082@student.liu.se", image: "Ture_Franzen.jpg" },
   { name: "Arvid Kylberg", roles: ["Analyst", "CT1 Lead"], team: "CT1", department: ["Product & Sales"], email: "arvky509@student.liu.se", image: "Kylberg_Arvid.jpg" },
   { name: "Melker Kimby", roles: ["Analyst", "CT3 Lead", "Long Dwell Coordinator"], team: "CT3", department: ["Product & Sales"], email: "melki871@student.liu.se", image: "Melker_Kimby.jpeg" },
-  { name: "Linn Aldgård Lindblom", roles: ["UX Designer"], team: "CT4", department: ["Product & Sales", "Research & Development"], email: "linal488@student.liu.se", image: "Linn_Aldgard_Lindblom.jpg" },
-  { name: "Tyra Kahn", roles: ["UX Designer", "Rule Configuration"], team: "CT2", department: ["Product & Sales", "Research & Development"], email: "tyrka731@student.liu.se", image: "Tyra_Kahn.JPG" },
+  { name: "Linn Aldgård Lindblom", roles: ["UX Designer", "Developer"], team: "CT4", department: ["Product & Sales", "Research & Development"], email: "linal488@student.liu.se", image: "Linn_Aldgard_Lindblom.jpg" },
+  { name: "Tyra Kahn", roles: ["UX Designer", "Developer"], team: "CT2", department: ["Product & Sales", "Research & Development"], email: "tyrka731@student.liu.se", image: "Tyra_Kahn.JPG" },
   { name: "Isak Gunnarsson", roles: ["Technical Writer", "Assistant Process Manager"], team: "Support", department: ["Product & Sales"], email: "isagu342@student.liu.se", image: "isak_gunnarsson.JPG" },
   { name: "Johan Löttinger", roles: ["Technical Writer", "Developer"], team: "CT4", department: ["Product & Sales"], email: "johlo529@student.liu.se", image: "Johan_Löttinger.jpg" },
   { name: "Dzenan Gradisic", roles: ["QA Lead", "Evaluation Owner"], team: "Support", department: ["Product & Sales"], email: "dzegr019@student.liu.se", image: "Dzenan_Gradisic.jpg" },
@@ -19,8 +19,8 @@ const team = [
   { name: "Hugo Waller", roles: ["Tester"], team: "CT1", department: ["Product & Sales"], email: "hugwa027@student.liu.se", image: "Hugo_Waller.jpg" },
   { name: "Erik Andreasson", roles: ["Tester", "End-to-End Tester: Long Dwell"], team: "CT3", department: ["Product & Sales"], email: "erand459@student.liu.se", image: "Erik_Andreasson.jpeg" },
   { name: "Prithvi Raj Ashokkumar", roles: ["Architect"], team: "CT1", department: ["Research & Development"], email: "prias732@student.liu.se", image: "Prithvi_raj_ashokkumar.jpg" },
-  { name: "Isak Kälvegren", roles: ["Config Manager", "Tester"], team: "CT4", department: ["Research & Development"], email: "isaka283@student.liu.se", image: "Isak_kalvegren.jpg" },
-  { name: "Isak Mattson", roles: ["Pipeline & Deployment Manager"], team: "Support", department: ["Research & Development"], email: "isama856@student.liu.se", image: "Isak_Mattsson.png" },
+  { name: "Isak Kälvegren", roles: ["Config Manager", "Tester"], team: "CT4", department: ["Research & Development"], email: "isaka283@student.liu.se", image: "Isak_kalvegren.jpeg" },
+  { name: "Isak Mattsson", roles: ["Pipeline & Deployment Manager"], team: "Support", department: ["Research & Development"], email: "isama856@student.liu.se", image: "Isak_Mattsson.png" },
   { name: "Kasper Andreasson", roles: ["Agentic Responsible", "Developer", "Test Data"], team: "CT3", department: ["Research & Development"], email: "kasan688@student.liu.se", image: "Kasper_andreasson.jpeg" },
   { name: "Alex Eriksson", roles: ["Developer"], team: "CT3", department: ["Research & Development"], email: "aleer595@student.liu.se", image: "Alex_Eriksson.png" },
   { name: "Gustav Kölerud", roles: ["Developer"], team: "CT1", department: ["Research & Development"], email: "gusko433@student.liu.se", image: "Gustav_Kölerud.jpeg" },
@@ -130,6 +130,10 @@ function render(list) {
     const cell = createCell(member, i);
     teamGrid.appendChild(cell);
   }
+
+  // Visa antal träffar och "No results found." när inget matchar
+  resultCount.textContent = list.length + " of " + team.length;
+  emptyState.hidden = list.length > 0;
 }
 
 function applyFilters() {
@@ -191,3 +195,35 @@ roleFilter.addEventListener("change", applyFilters);
 populateSelect(departmentFilter, departments);
 populateSelect(roleFilter, roles);
 render(team);
+// ---------- Flikar ----------
+// Klick eller piltangenter byter flik. Vald flik sparas i adressen (#about),
+// så att man kan länka direkt till en flik.
+
+const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+
+function selectTab(tab) {
+  tabs.forEach(t => {
+    const selected = t === tab;
+    t.setAttribute("aria-selected", selected);
+    t.tabIndex = selected ? 0 : -1;
+    document.getElementById(t.getAttribute("aria-controls")).hidden = !selected;
+  });
+  history.replaceState(null, "", "#" + tab.id.replace("tab-", ""));
+}
+
+tabs.forEach((tab, i) => {
+  tab.addEventListener("click", () => selectTab(tab));
+  tab.addEventListener("keydown", e => {
+    let next = null;
+    if (e.key === "ArrowRight") next = tabs[(i + 1) % tabs.length];
+    if (e.key === "ArrowLeft") next = tabs[(i - 1 + tabs.length) % tabs.length];
+    if (next) {
+      e.preventDefault();
+      next.focus();
+      selectTab(next);
+    }
+  });
+});
+
+const startTab = document.getElementById("tab-" + location.hash.slice(1));
+if (startTab) selectTab(startTab);
