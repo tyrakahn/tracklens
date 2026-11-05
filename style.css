@@ -9,6 +9,14 @@
   --serif: 'Fraunces', Georgia, serif;
 }
 
+.masthead-meta { margin-top: 16px; }
+.masthead-meta .masthead-sub { margin: 0; }
+.update-note {
+  margin: 0;
+  font-size: 0.74rem;
+  color: var(--ink-soft);
+}
+
 * { box-sizing: border-box; }
 
 html, body {
