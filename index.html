@@ -55,15 +55,26 @@
     <div class="prose">
       <p>
         TrackLens analyses metadata from Axis cameras to detect events such as
-        people moving the wrong way, entering a forbidden zone or staying in
-        one place for too long. The events are shown to an operator in a web
-        interface, together with a short video clip of what happened.
+        people moving the wrong way, entering a forbidden zone, staying in one
+        place for too long, following someone too closely (Tailgating) or
+        lying on the ground (Man down). The events are shown to an operator
+        in a web interface, together with a short video clip of what happened.
       </p>
       <p>
-        The project is developed by a team of 28 students in four core teams
-        and a support team, for Axis Communications, as part of the course
-        TDDC88 Software Engineering at Linköping University.
+        The project is developed by a team of 28 students for Axis
+        Communications, as part of the course TDDC88 Software Engineering at
+        Linköping University. Since Sprint 3 the team is organised around
+        events: each core team owns its event from detection to the operator
+        interface.
       </p>
+      <ul class="team-list">
+        <li><strong>CT1</strong> &ndash; Data ingestion, event storage and the frame-by-frame metadata stream</li>
+        <li><strong>CT2</strong> &ndash; Tailgating</li>
+        <li><strong>CT3</strong> &ndash; Learning statistical baseline and code cleanup</li>
+        <li><strong>CT4</strong> &ndash; Man down</li>
+        <li><strong>CT5</strong> &ndash; Operator interface</li>
+        <li><strong>Support</strong> &ndash; Project, product, process and R&amp;D management</li>
+      </ul>
     </div>
   </section>
 
@@ -72,12 +83,23 @@
     <!-- Lägg nya uppdateringar överst och ändra "Last updated" längst ner. -->
     <ol class="updates">
       <li>
-        <span class="update-date">November 2026</span>
+        <span class="update-date">9 November 2026 &middot; Sprint 3</span>
         <p>
-          Rule violations for Wrong way, Forbidden zone and manual Long dwell
-          are now published as events. The Events page shows how a Long dwell
-          event was flagged (statistical or manual) and how long the person
-          stayed.
+          Sprint 3 started with a new team structure based on Axis's feedback:
+          each team owns one event end to end. Two teams build the new events
+          Tailgating and Man down, one team makes the statistical baseline
+          learn over time and cleans up the code base, and the UI team adds the
+          new events to the operator interface.
+        </p>
+      </li>
+      <li>
+        <span class="update-date">6 November 2026 &middot; Milestone M3</span>
+        <p>
+          The Sprint 2 functionality was demonstrated live to Axis at their
+          office. Rule-based detection is complete, including manual Long dwell,
+          and statistics settings now take effect without a restart and can be
+          switched off per camera. The Architecture Notebook 1.0, Test Plan 2.0,
+          Test Report 1.0 and QA Plan 1.3 were released.
         </p>
       </li>
       <li>
@@ -89,7 +111,7 @@
         </p>
       </li>
       <li>
-        <span class="update-date">9 October 2026</span>
+        <span class="update-date">9 October 2026 &middot; Sprint 2</span>
         <p>
           Sprint 2 started with a new team structure: four core teams
           (CT1&ndash;CT4) and a support team.
@@ -99,7 +121,7 @@
   </section>
 
   <footer class="site-footer">
-    Last updated: <time datetime="2026-11-04">4 November 2026</time>
+    Last updated: <time datetime="2026-11-09">9 November 2026</time>
   </footer>
 
 </div>
