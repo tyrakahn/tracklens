@@ -1,34 +1,34 @@
-// roles: första rollen är ursprungsrollen, resten är roller från Sprint 3-indelningen (9 nov).
-// team: vilket core team (CT1–CT5) eller Support personen tillhör i Sprint 3.
+// roles: första rollen är ursprungsrollen, resten är roller från Sprint 4-indelningen.
+// team: vilka team personen tillhör i Sprint 4 (CT1–CT5, QA eller Support). En person kan tillhöra flera.
 const team = [
-  { name: "Erdion Lajiq", roles: ["Project Manager"], team: "Support", department: ["Management"], email: "erdla490@student.liu.se", image: "Erdion_Lajiq.jpg" },
-  { name: "Ali Azimi", roles: ["R&D Manager"], team: "Support", department: ["Management"], email: "aliaz557@student.liu.se", image: "Ali_Azimi.jpeg" },
-  { name: "Lilly Eriksson", roles: ["Product Manager"], team: "Support", department: ["Product & Sales"], email: "liler063@student.liu.se", image: "lilly_eriksson.png" },
-  { name: "Albin Westerdahl", roles: ["Process Manager"], team: "Support", department: ["Product & Sales"], email: "albwe215@student.liu.se", image: "Albin_Westerdahl.jpg" },
-  { name: "Arvid Kylberg", roles: ["Analyst", "CT1 Lead"], team: "CT1", department: ["Product & Sales"], email: "arvky509@student.liu.se", image: "Kylberg_Arvid.jpg" },
-  { name: "Hugo Waller", roles: ["Tester"], team: "CT1", department: ["Product & Sales"], email: "hugwa027@student.liu.se", image: "Hugo_Waller.jpg" },
-  { name: "Johan Larsson", roles: ["Developer"], team: "CT1", department: ["Research & Development"], email: "johla909@student.liu.se", image: "johan_larsson.jpg" },
-  { name: "Gustav Kölerud", roles: ["Developer"], team: "CT1", department: ["Research & Development"], email: "gusko433@student.liu.se", image: "Gustav_Kölerud.jpeg" },
-  { name: "Prithvi Raj Ashokkumar", roles: ["Architect"], team: "CT1", department: ["Research & Development"], email: "prias732@student.liu.se", image: "Prithvi_raj_ashokkumar.jpg" },
-  { name: "Isak Mattsson", roles: ["Pipeline & Deployment Manager"], team: "CT1", department: ["Research & Development"], email: "isama856@student.liu.se", image: "Isak_Mattsson.png" },
-  { name: "Ture Franzén", roles: ["Analyst", "CT2 Lead"], team: "CT2", department: ["Product & Sales"], email: "turfr082@student.liu.se", image: "Ture_Franzen.jpg" },
-  { name: "Alex Eriksson", roles: ["Developer"], team: "CT2", department: ["Research & Development"], email: "aleer595@student.liu.se", image: "Alex_Eriksson.png" },
-  { name: "Ebba Kanon", roles: ["Developer"], team: "CT2", department: ["Research & Development"], email: "ebbka919@student.liu.se", image: "Ebba_Kanon.jpg" },
-  { name: "Isak Gunnarsson", roles: ["Technical Writer", "Developer"], team: "CT2", department: ["Product & Sales", "Research & Development"], email: "isagu342@student.liu.se", image: "isak_gunnarsson.JPG" },
-  { name: "Erik Andreasson", roles: ["Tester"], team: "CT2", department: ["Product & Sales"], email: "erand459@student.liu.se", image: "Erik_Andreasson.jpeg" },
-  { name: "Melker Kimby", roles: ["Analyst", "CT3 Lead"], team: "CT3", department: ["Product & Sales"], email: "melki871@student.liu.se", image: "Melker_Kimby.jpeg" },
-  { name: "Kasper Andreasson", roles: ["Agentic Responsible", "Developer"], team: "CT3", department: ["Research & Development"], email: "kasan688@student.liu.se", image: "Kasper_andreasson.jpeg" },
-  { name: "Johan Löttiger", roles: ["Technical Writer", "Developer"], team: "CT3", department: ["Product & Sales", "Research & Development"], email: "johlo529@student.liu.se", image: "Johan_Löttinger.jpg" },
-  { name: "Tyra Kahn", roles: ["UX Designer", "Developer"], team: "CT3", department: ["Product & Sales", "Research & Development"], email: "tyrka731@student.liu.se", image: "Tyra_Kahn.JPG" },
-  { name: "Dzenan Gradisic", roles: ["QA Lead", "Tester"], team: "CT3", department: ["Product & Sales"], email: "dzegr019@student.liu.se", image: "Dzenan_Gradisic.jpg" },
-  { name: "Victor Kallenberg", roles: ["P&S Manager", "Analyst", "CT4 Lead"], team: "CT4", department: ["Management", "Product & Sales"], email: "vicka991@student.liu.se", image: "Victor_Kallenberg.jpg" },
-  { name: "Jonathan Blomqvist", roles: ["Developer"], team: "CT4", department: ["Research & Development"], email: "jonbl638@student.liu.se", image: "Jonathan_Blomqvist.jpg" },
-  { name: "Leo Fong", roles: ["Developer"], team: "CT4", department: ["Research & Development"], email: "leofo500@student.liu.se", image: "Leo_Fong.JPG" },
-  { name: "Johan Hultgren", roles: ["Tester"], team: "CT4", department: ["Product & Sales"], email: "johhu973@student.liu.se", image: "Johan_Hultgren.jpg" },
-  { name: "Hanna Hennung", roles: ["Lead Analyst", "CT5 Lead"], team: "CT5", department: ["Product & Sales"], email: "hanhe442@student.liu.se", image: "Hanna_Hennung.jpeg" },
-  { name: "Linn Aldgård Lindblom", roles: ["UX Designer", "Developer"], team: "CT5", department: ["Product & Sales", "Research & Development"], email: "linal488@student.liu.se", image: "Linn_Aldgard_Lindblom.jpg" },
-  { name: "Nils von Essen", roles: ["Developer"], team: "CT5", department: ["Research & Development"], email: "nilvo233@student.liu.se", image: "Nils_vonEssen.jpeg" },
-  { name: "Isak Kälvegren", roles: ["Config Manager", "Tester"], team: "CT5", department: ["Research & Development"], email: "isaka283@student.liu.se", image: "Isak_kalvegren.jpeg" },
+  { name: "Erdion Lajiq", roles: ["Project Manager"], team: ["Support"], department: ["Management"], email: "erdla490@student.liu.se", image: "Erdion_Lajiq.jpg" },
+  { name: "Albin Westerdahl", roles: ["Process Manager"], team: ["Support"], department: ["Product & Sales"], email: "albwe215@student.liu.se", image: "Albin_Westerdahl.jpg" },
+  { name: "Lilly Eriksson", roles: ["Product Manager"], team: ["QA"], department: ["Product & Sales"], email: "liler063@student.liu.se", image: "lilly_eriksson.png" },
+  { name: "Dzenan Gradisic", roles: ["QA Lead"], team: ["QA"], department: ["Product & Sales"], email: "dzegr019@student.liu.se", image: "Dzenan_Gradisic.jpg" },
+  { name: "Arvid Kylberg", roles: ["Analyst", "CT1 Lead"], team: ["CT1"], department: ["Product & Sales"], email: "arvky509@student.liu.se", image: "Kylberg_Arvid.jpg" },
+  { name: "Hugo Waller", roles: ["Tester"], team: ["CT1", "QA"], department: ["Product & Sales"], email: "hugwa027@student.liu.se", image: "Hugo_Waller.jpg" },
+  { name: "Gustav Kölerud", roles: ["Developer"], team: ["CT1"], department: ["Research & Development"], email: "gusko433@student.liu.se", image: "Gustav_Kölerud.jpeg" },
+  { name: "Prithvi Raj Ashokkumar", roles: ["Architect"], team: ["CT1"], department: ["Research & Development"], email: "prias732@student.liu.se", image: "Prithvi_raj_ashokkumar.jpg" },
+  { name: "Isak Mattsson", roles: ["Pipeline & Deployment Manager"], team: ["CT1"], department: ["Research & Development"], email: "isama856@student.liu.se", image: "Isak_Mattsson.png" },
+  { name: "Ture Franzén", roles: ["Analyst", "CT2 Lead"], team: ["CT2"], department: ["Product & Sales"], email: "turfr082@student.liu.se", image: "Ture_Franzen.jpg" },
+  { name: "Alex Eriksson", roles: ["Developer"], team: ["CT2"], department: ["Research & Development"], email: "aleer595@student.liu.se", image: "Alex_Eriksson.png" },
+  { name: "Ebba Kanon", roles: ["Developer"], team: ["CT2"], department: ["Research & Development"], email: "ebbka919@student.liu.se", image: "Ebba_Kanon.jpg" },
+  { name: "Isak Gunnarsson", roles: ["Technical Writer", "Developer"], team: ["CT2"], department: ["Product & Sales", "Research & Development"], email: "isagu342@student.liu.se", image: "isak_gunnarsson.JPG" },
+  { name: "Erik Andreasson", roles: ["Tester"], team: ["CT2", "QA"], department: ["Product & Sales"], email: "erand459@student.liu.se", image: "Erik_Andreasson.jpeg" },
+  { name: "Melker Kimby", roles: ["Analyst", "CT3 Lead"], team: ["CT3"], department: ["Product & Sales"], email: "melki871@student.liu.se", image: "Melker_Kimby.jpeg" },
+  { name: "Ali Azimi", roles: ["R&D Manager", "Developer"], team: ["CT3"], department: ["Management", "Research & Development"], email: "aliaz557@student.liu.se", image: "Ali_Azimi.jpeg" },
+  { name: "Johan Löttiger", roles: ["Technical Writer", "Developer"], team: ["CT3"], department: ["Product & Sales", "Research & Development"], email: "johlo529@student.liu.se", image: "Johan_Löttinger.jpg" },
+  { name: "Tyra Kahn", roles: ["UX Designer", "Developer"], team: ["CT3"], department: ["Product & Sales", "Research & Development"], email: "tyrka731@student.liu.se", image: "Tyra_Kahn.JPG" },
+  { name: "Victor Kallenberg", roles: ["P&S Manager", "Analyst", "CT4 Lead"], team: ["CT4"], department: ["Management", "Product & Sales"], email: "vicka991@student.liu.se", image: "Victor_Kallenberg.jpg" },
+  { name: "Jonathan Blomqvist", roles: ["Developer"], team: ["CT4"], department: ["Research & Development"], email: "jonbl638@student.liu.se", image: "Jonathan_Blomqvist.jpg" },
+  { name: "Leo Fong", roles: ["Developer"], team: ["CT4"], department: ["Research & Development"], email: "leofo500@student.liu.se", image: "Leo_Fong.JPG" },
+  { name: "Kasper Andreasson", roles: ["Agentic Responsible", "Developer"], team: ["CT4"], department: ["Research & Development"], email: "kasan688@student.liu.se", image: "Kasper_andreasson.jpeg" },
+  { name: "Johan Hultgren", roles: ["Tester"], team: ["CT4", "QA"], department: ["Product & Sales"], email: "johhu973@student.liu.se", image: "Johan_Hultgren.jpg" },
+  { name: "Hanna Hennung", roles: ["Lead Analyst", "CT5 Lead"], team: ["CT5"], department: ["Product & Sales"], email: "hanhe442@student.liu.se", image: "Hanna_Hennung.jpeg" },
+  { name: "Linn Aldgård Lindblom", roles: ["UX Designer", "Developer"], team: ["CT5"], department: ["Product & Sales", "Research & Development"], email: "linal488@student.liu.se", image: "Linn_Aldgard_Lindblom.jpg" },
+  { name: "Nils von Essen", roles: ["Developer"], team: ["CT5"], department: ["Research & Development"], email: "nilvo233@student.liu.se", image: "Nils_vonEssen.jpeg" },
+  { name: "Johan Larsson", roles: ["Developer", "Dev Support"], team: ["CT5", "QA"], department: ["Research & Development"], email: "johla909@student.liu.se", image: "johan_larsson.jpg" },
+  { name: "Isak Kälvegren", roles: ["Config Manager", "Tester"], team: ["CT5"], department: ["Research & Development"], email: "isaka283@student.liu.se", image: "Isak_kalvegren.jpeg" },
 ];
 
 
@@ -102,7 +102,7 @@ function createCell(member, displayIndex) {
 
   const tags = document.createElement("p");
   tags.className = "cell-tags";
-  tags.textContent = member.team + " · " + member.department.join(" / ");
+  tags.textContent = member.team.join(" / ") + " · " + member.department.join(" / ");
 
 
   const email = document.createElement("p");
